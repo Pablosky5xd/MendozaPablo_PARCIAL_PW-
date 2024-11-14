@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página Principal</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Menú de navegación -->
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="pagina1.html">Perfil</a>
+    <a href="pagina2.html">Portafolio</a>
+    <a href="pagina3.html">Blog</a>
+    <a href="pagina4.html">Proyectos</a>
+    <a href="pagina5.html">Biblioteca</a>
+  </nav>
+
+  <!-- Contenido principal -->
+  <main class="main">
+    <h1>Bienvenido a Mi Página</h1>
+    <p>Explora las diferentes secciones para conocer más sobre mis habilidades, trabajos y proyectos.</p>
+
+    <!-- Botones animados con breve descripción -->
+    <section class="botones">
+      <div class="boton-animado">
+        <a href="pagina1.html" class="boton">Perfil Profesional</a>
+        <p>Conoce más sobre su formación y habilidades.</p>
+      </div>
+      <div class="boton-animado">
+        <a href="pagina2.html" class="boton">Fotos ⚽🏃🏾‍♂️</a>
+        <p>Explora algunos de fotos mas iconicas en su carrera.</p>
+      </div>
+      <div class="boton-animado">
+        <a href="pagina3.html" class="boton">Blog</a>
+        <p>Lee artículos y publicaciones en su blog Profesional.</p>
+      </div>
+      <div class="boton-animado">
+        <a href="pagina4.html" class="boton">Proyectos</a>
+        <p>Descubre los proyectos en los que he estado trabajando.</p>
+      </div>
+      <div class="boton-animado">
+        <a href="pagina5.html" class="boton">Biblioteca</a>
+        <p>Accede a recursos y materiales de referencia que recomiendo.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Pie de página -->
+  <footer>
+    <p>Desarrollado por [Tu Nombre] - <span id="fecha"></span></p>
+  </footer>
+
+  <script>
+    // Script para actualizar la fecha automáticamente
+    const fechaElement = document.getElementById("fecha");
+    const fechaActual = new Date().toLocaleDateString('es-ES');
+    fechaElement.textContent = fechaActual;
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,129 @@
+/* Estilo general para el cuerpo */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
+/* Menú de navegación */
+nav {
+  background-color: #333;
+  padding: 10px 0;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+  font-size: 18px;
+  display: inline-block;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Suaviza los cambios en el fondo y el desplazamiento */
+}
+
+/* Efecto hover en los enlaces de navegación */
+nav a:hover {
+  background-color: #555;
+  transform: scale(1.05); /* Escala suavemente los enlaces */
+  border-radius: 5px;
+}
+
+/* Estilo para el post */
+.post {
+  margin-bottom: 20px;
+  border-radius: 10px; /* Bordes redondeados para un efecto más moderno */
+  overflow: hidden; /* Asegura que todo el contenido dentro del post no sobresalga */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil para dar profundidad */
+  transition: box-shadow 0.3s ease-in-out; /* Suaviza la sombra */
+}
+
+/* Efecto en las imágenes dentro del post */
+.post img {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Asegura que las imágenes se recorten adecuadamente */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave para la imagen y la sombra */
+  border-radius: 8px; /* Bordes redondeados en las imágenes */
+}
+
+/* Efecto hover en las imágenes: zoom con suavizado */
+.post:hover img {
+  transform: scale(1.05); /* Zoom suave */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada al hacer hover */
+}
+
+/* Estilo para el enlace "Leer más" */
+.leer-mas {
+  color: #28a745; /* Color verde para el enlace */
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1em; /* Tamaño de fuente ligeramente mayor para mayor visibilidad */
+  position: relative;
+  display: inline-block;
+  transition: color 0.3s ease, transform 0.3s ease; /* Transición para suavizar el cambio de color */
+}
+
+/* Efecto hover para el enlace "Leer más" */
+.leer-mas:hover {
+  color: #218838; /* Cambio de color al pasar el ratón */
+  transform: translateY(-2px); /* Ligeramente eleva el enlace para un efecto de desplazamiento */
+}
+
+/* Subrayado animado en "Leer más" */
+.leer-mas::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #28a745;
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0); /* Inicialmente el subrayado está oculto */
+  transition: transform 0.3s ease;
+}
+
+/* Mostrar el subrayado al hacer hover */
+.leer-mas:hover::after {
+  transform: scaleX(1); /* Aparece el subrayado de izquierda a derecha */
+}
+
+/* Estilo para los botones de navegación */
+button {
+  background-color: #4CAF50; /* Color verde para los botones */
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px; /* Bordes redondeados */
+  margin: 10px 0;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Suaviza la transición */
+}
+
+/* Efecto hover para los botones */
+button:hover {
+  background-color: #45a049; /* Color verde más oscuro al pasar el ratón */
+  transform: translateY(-3px); /* Eleva el botón al hacer hover */
+}
+
+/* Efecto active para los botones al presionarlos */
+button:active {
+  transform: translateY(1px); /* El botón se presiona hacia abajo */
+}
+
+/* Estilo de footer */
+footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: 0.9em;
+}
+
+footer p {
+  margin: 0;
+}

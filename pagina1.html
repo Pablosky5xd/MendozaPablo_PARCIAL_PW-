@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil de Sergio Ramos</title>
+  <link rel="stylesheet" href="styles1.css">
+</head>
+<body>
+
+  <!-- Menú de navegación -->
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="pagina1.html">Perfil</a>
+    <a href="pagina2.html">Portafolio</a>
+    <a href="pagina3.html">Blog</a>
+    <a href="pagina4.html">Proyectos</a>
+    <a href="pagina5.html">Biblioteca</a>
+  </nav>
+
+  <!-- Perfil del deportista -->
+  <section class="perfil">
+    <h1>Perfil de Sergio Ramos</h1>
+    <p class="texto-giratorio">Biografía</p>
+    <p>Futbolista español, reconocido por su gran habilidad defensiva y liderazgo en la cancha. Ha jugado en algunos de los clubes más prestigiosos del mundo y ha sido un pilar fundamental en la defensa de la selección española de fútbol.</p>
+
+    <h2>Carrera</h2>
+    <table>
+      <tr>
+        <th>Año</th>
+        <th>Equipo</th>
+        <th>Logro</th>
+      </tr>
+      <tr>
+        <td>2005</td>
+        <td>Real Madrid</td>
+        <td>Fichaje e inicio de carrera</td>
+      </tr>
+      <tr>
+        <td>2010</td>
+        <td>España</td>
+        <td>Campeón del Mundo</td>
+      </tr>
+      <tr>
+        <td>2012</td>
+        <td>España</td>
+        <td>Campeón de la Eurocopa</td>
+      </tr>
+      <tr>
+        <td>2014</td>
+        <td>Real Madrid</td>
+        <td>Campeón de la UEFA Champions League</td>
+      </tr>
+      <tr>
+        <td>2021</td>
+        <td>Paris Saint-Germain</td>
+        <td>Nuevo fichaje</td>
+      </tr>
+    </table>
+
+  </section>
+
+  <footer>
+    <p>Desarrollado por [Tu Nombre] - <span id="fecha"></span></p>
+  </footer>
+
+  <script>
+    // Script para actualizar la fecha automáticamente
+    const fechaElement = document.getElementById("fecha");
+    const fechaActual = new Date().toLocaleDateString('es-ES');
+    fechaElement.textContent = fechaActual;
+  </script>
+
+</body>
+</html>

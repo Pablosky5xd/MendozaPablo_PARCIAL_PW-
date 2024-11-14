@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galería de Imágenes de Sergio Ramos</title>
+  <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+
+  <!-- Menú de navegación -->
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="pagina1.html">Perfil</a>
+    <a href="pagina2.html">Portafolio</a>
+    <a href="pagina3.html">Blog</a>
+    <a href="pagina4.html">Proyectos</a>
+    <a href="pagina5.html">Biblioteca</a>
+  </nav>
+
+  <!-- Galería de imágenes -->
+  <section class="portafolio">
+    <div class="titulo-contenedor">
+      <h1 class="titulo-animado">Galería de Imágenes de Sergio Ramos</h1>
+    </div>
+    <!-- Caja con animación de ciclo de colores -->
+<div class="ciclo-colores"></div>
+
+    <div class="galeria">
+      <div class="imagen animacion1">
+        <img src="entrenamiento.jpeg" alt="Entrenamiento">
+        <div class="descripcion">
+          <h3>Entrenamiento</h3>
+          <p>Preparación física intensa para cada temporada.</p>
+        </div>
+      </div>
+      <div class="imagen animacion2">
+        <img src="celebracion.jpeg" alt="Celebración">
+        <div class="descripcion">
+          <h3>Celebración</h3>
+          <p>Uno de sus momentos más memorables en el campo.</p>
+        </div>
+      </div>
+      <div class="imagen animacion3">
+        <img src="equipo.jpeg" alt="Entrenamiento en equipo">
+        <div class="descripcion">
+          <h3>Entrenamiento en Equipo</h3>
+          <p>Junto a sus compañeros en el campo de juego.</p>
+        </div>
+      </div>
+      <div class="imagen animacion4">
+        <img src="premio.jpeg" alt="Premio">
+        <div class="descripcion">
+          <h3>Premio</h3>
+          <p>Reconocimientos por su trayectoria y logros.</p>
+        </div>
+      </div>
+      <div class="imagen animacion5">
+        <img src="concentracion.jpeg" alt="Concentración">
+        <div class="descripcion">
+          <h3>Concentración</h3>
+          <p>Preparándose mentalmente para el partido.</p>
+        </div>
+      </div>
+      <div class="imagen animacion6">
+        <img src="partido.jpeg" alt="Partido Internacional">
+        <div class="descripcion">
+          <h3>Partido Internacional</h3>
+          <p>Representando a su país en el campo.</p>
+        </div>
+      </div>
+      <div class="imagen animacion7">
+        <img src="prensa.jpeg" alt="Conferencia de Prensa">
+        <div class="descripcion">
+          <h3>Conferencia de Prensa</h3>
+          <p>Compartiendo sus pensamientos con la prensa.</p>
+        </div>
+      </div>
+      <div class="imagen animacion8">
+        <img src="gol.jpeg" alt="Celebración de Goles">
+        <div class="descripcion">
+          <h3>Celebración de Goles</h3>
+          <p>Celebrando su pasión por el juego.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Desarrollado por [Tu Nombre] - <span id="fecha"></span></p>
+  </footer>
+
+  <script>
+    const fechaElement = document.getElementById("fecha");
+    const fechaActual = new Date().toLocaleDateString('es-ES');
+    fechaElement.textContent = fechaActual;
+  </script>
+
+</body>
+</html>

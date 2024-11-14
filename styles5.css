@@ -1,0 +1,50 @@
+/* Lista de libros */
+.libros {
+    list-style-type: decimal;
+    padding: 0;
+  }
+  
+  .titulo-libro {
+    font-size: 20px;
+    cursor: pointer;
+    margin: 10px 0;
+    color: #333;
+  }
+  
+  .titulo-libro:hover {
+    color: #007bff;
+  }
+  
+  .sinopsis {
+    display: none;
+    margin-top: 10px;
+  }
+  
+  .sinopsis img {
+    width: 150px;
+    height: 200px;
+    float: left;
+    margin-right: 20px;
+  }
+  
+  .sinopsis .descripcion {
+    font-size: 16px;
+    line-height: 1.6;
+    animation: escribir 3s steps(30) forwards;
+  }
+  
+  .sinopsis.mostrar {
+    display: block;
+  }
+  
+  /* Animación de escritura de la sinopsis */
+  @keyframes escribir {
+    from {
+      width: 0;
+      white-space: nowrap;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  

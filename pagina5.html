@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biblioteca Personal</title>
+  <link rel="stylesheet" href="styles5.css">
+</head>
+<body>
+
+  <!-- Menú de navegación -->
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="pagina1.html">Perfil</a>
+    <a href="pagina2.html">Portafolio</a>
+    <a href="pagina3.html">Blog</a>
+    <a href="pagina4.html">Proyectos</a>
+    <a href="pagina5.html">Biblioteca</a>
+  </nav>
+
+  <section class="biblioteca">
+    <h1>Mi Biblioteca Personal</h1>
+
+    <!-- Lista de libros -->
+    <ol class="libros">
+      <li>
+        <h3 class="titulo-libro" onclick="mostrarLibro('libro1')">Libro 1: Título</h3>
+        <div id="libro1" class="sinopsis">
+          <img src="portada1.jpg" alt="Portada Libro 1">
+          <p class="descripcion">Este es un resumen del libro 1...</p>
+        </div>
+      </li>
+      <li>
+        <h3 class="titulo-libro" onclick="mostrarLibro('libro2')">Libro 2: Título</h3>
+        <div id="libro2" class="sinopsis">
+          <img src="portada2.jpg" alt="Portada Libro 2">
+          <p class="descripcion">Este es un resumen del libro 2...</p>
+        </div>
+      </li>
+      <!-- Más libros aquí -->
+    </ol>
+  </section>
+
+  <footer>
+    <p>Desarrollado por [Tu Nombre] - <span id="fecha"></span></p>
+  </footer>
+
+  <script>
+    function mostrarLibro(id) {
+      const libro = document.getElementById(id);
+      libro.classList.toggle('mostrar');
+    }
+
+    // Script para actualizar la fecha automáticamente
+    const fechaElement = document.getElementById("fecha");
+    const fechaActual = new Date().toLocaleDateString('es-ES');
+    fechaElement.textContent = fechaActual;
+  </script>
+
+</body>
+</html>

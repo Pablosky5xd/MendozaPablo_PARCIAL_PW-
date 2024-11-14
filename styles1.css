@@ -1,0 +1,93 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+nav {
+  background-color: #333;
+  padding: 10px;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+nav a:hover {
+  background-color: #555;
+}
+
+.perfil {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.texto-giratorio {
+  display: inline-block;
+  font-size: 24px;
+  color: #007bff;
+  animation: girar360 2s linear infinite;
+  margin-bottom: 10px;
+}
+
+/* Animación de giro */
+@keyframes girar360 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table th, table td {
+  padding: 8px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px;
+  text-decoration: none;
+  color: white;
+  background-color: #333;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+.social-icons a:hover {
+  background-color: #ff6347;
+}
+
+.btn-curriculum {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.btn-curriculum:hover {
+  background-color: #218838;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
