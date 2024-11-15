@@ -1,50 +1,113 @@
-/* Lista de libros */
-.libros {
-    list-style-type: decimal;
-    padding: 0;
+/* Estilo general del cuerpo */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* Menú de navegación */
+nav {
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 20px;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 10px 15px;
+  border-radius: 5px;
+  position: relative;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Efecto hover en los enlaces del menú */
+nav a:hover {
+  background-color: #28a745; /* Verde claro */
+  color: white;
+  transform: translateY(-3px); /* Efecto de elevación */
+}
+
+/* Subrayado animado para los enlaces */
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 3px;
+  background-color: #28a745;
+  bottom: 0;
+  left: 50%;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+/* Títulos */
+h1 {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 2.5em;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  font-weight: bold;
+  animation: fadeIn 2s ease-out;
+}
+
+/* Animación para el título */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
   }
-  
-  .titulo-libro {
-    font-size: 20px;
-    cursor: pointer;
-    margin: 10px 0;
-    color: #333;
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  .titulo-libro:hover {
-    color: #007bff;
-  }
-  
-  .sinopsis {
-    display: none;
-    margin-top: 10px;
-  }
-  
-  .sinopsis img {
-    width: 150px;
-    height: 200px;
-    float: left;
-    margin-right: 20px;
-  }
-  
-  .sinopsis .descripcion {
-    font-size: 16px;
-    line-height: 1.6;
-    animation: escribir 3s steps(30) forwards;
-  }
-  
-  .sinopsis.mostrar {
-    display: block;
-  }
-  
-  /* Animación de escritura de la sinopsis */
-  @keyframes escribir {
-    from {
-      width: 0;
-      white-space: nowrap;
-    }
-    to {
-      width: 100%;
-    }
-  }
-  
+}
+
+/* Estilo para los botones */
+button {
+  background-color: #28a745;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+}
+
+/* Efecto hover en los botones */
+button:hover {
+  background-color: #218838;
+  transform: translateY(-3px); /* Efecto de elevación */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para el footer */
+footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: 0.9em;
+}
+
+footer p {
+  margin: 0;
+}

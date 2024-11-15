@@ -19,58 +19,137 @@ nav a {
   text-decoration: none;
   font-size: 18px;
   display: inline-block;
-  transition: background-color 0.3s ease, transform 0.3s ease; /* Suaviza los cambios en el fondo y el desplazamiento */
+  transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
+  font-weight: 500;
+  position: relative;
 }
 
 /* Efecto hover en los enlaces de navegación */
 nav a:hover {
-  background-color: #555;
-  transform: scale(1.05); /* Escala suavemente los enlaces */
+  background-color: #218838;
+  transform: scale(1.05);
   border-radius: 5px;
+  color: #fff;
+  animation: bounce 0.5s ease infinite; /* Efecto de rebote */
+}
+
+/* Animación de rebote */
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(-5px);
+  }
+  40% {
+    transform: translateY(0);
+  }
+  60% {
+    transform: translateY(-3px);
+  }
+  80% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-2px);
+  }
+}
+
+/* Estilo para los encabezados (como botones) */
+h1, .seccion-titulo {
+  color: #333;
+  font-size: 2em;
+  font-weight: 500; /* Menor peso para un look más liviano */
+  text-align: center;
+  margin-top: 40px;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease, letter-spacing 0.2s ease;
+  position: relative;
+  display: inline-block;
+}
+
+/* Efecto hover en los encabezados */
+h1:hover, .seccion-titulo:hover {
+  color: #28a745; /* Cambio de color verde más vibrante */
+  transform: translateY(-5px); /* Desplazamiento hacia arriba más pronunciado */
+  letter-spacing: 2px; /* Expansión del espaciado para un look más sofisticado */
+  animation: bounce 0.5s ease infinite; /* Efecto de rebote en el encabezado */
+}
+
+/* Subrayado animado en los encabezados */
+h1::after, .seccion-titulo::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px; /* Un poco más grueso */
+  background-color: #28a745;
+  bottom: -8px; /* Más separación */
+  left: 0;
+  transform: scaleX(0); /* Inicialmente el subrayado está oculto */
+  transition: transform 0.3s ease;
+}
+
+/* Mostrar el subrayado de izquierda a derecha en los encabezados */
+h1:hover::after, .seccion-titulo:hover::after {
+  transform: scaleX(1);
+}
+
+/* Estilo para las secciones */
+.seccion {
+  margin: 20px 0;
+  color: black; /* Cambio de color verde más vibrante */
+  transform: translateY(-5px); /* Desplazamiento hacia arriba más pronunciado */
+  letter-spacing: 2px;
 }
 
 /* Estilo para el post */
 .post {
   margin-bottom: 20px;
-  border-radius: 10px; /* Bordes redondeados para un efecto más moderno */
-  overflow: hidden; /* Asegura que todo el contenido dentro del post no sobresalga */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil para dar profundidad */
-  transition: box-shadow 0.3s ease-in-out; /* Suaviza la sombra */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+  opacity: 0;
+  transform: translateY(50px); /* Se inicia fuera de la vista */
+  animation: slideUp 1s forwards; /* Animación de deslizamiento */
+  padding: 20px;
+  background-color: #fff;
 }
 
 /* Efecto en las imágenes dentro del post */
 .post img {
-  width: 100%;
+  width: 20%; /* Tamaño más pequeño */
   height: auto;
-  object-fit: cover; /* Asegura que las imágenes se recorten adecuadamente */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave para la imagen y la sombra */
-  border-radius: 8px; /* Bordes redondeados en las imágenes */
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  margin: -50 auto 00px; /* Centrado de la imagen */
 }
 
-/* Efecto hover en las imágenes: zoom con suavizado */
+/* Efecto hover en las imágenes */
 .post:hover img {
-  transform: scale(1.05); /* Zoom suave */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada al hacer hover */
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 /* Estilo para el enlace "Leer más" */
 .leer-mas {
-  color: #28a745; /* Color verde para el enlace */
+  color: #28a745;
   text-decoration: none;
   font-weight: bold;
-  font-size: 1.1em; /* Tamaño de fuente ligeramente mayor para mayor visibilidad */
+  font-size: 1.1em;
   position: relative;
   display: inline-block;
-  transition: color 0.3s ease, transform 0.3s ease; /* Transición para suavizar el cambio de color */
+  transition: color 0.3s ease, transform 0.3s ease, letter-spacing 0.2s ease;
 }
 
-/* Efecto hover para el enlace "Leer más" */
+/* Efecto hover en "Leer más" */
 .leer-mas:hover {
-  color: #218838; /* Cambio de color al pasar el ratón */
-  transform: translateY(-2px); /* Ligeramente eleva el enlace para un efecto de desplazamiento */
+  color: #218838;
+  transform: translateY(-2px);
+  letter-spacing: 1px; /* Espaciado de letras al hacer hover */
 }
 
-/* Subrayado animado en "Leer más" */
 .leer-mas::after {
   content: '';
   position: absolute;
@@ -79,40 +158,44 @@ nav a:hover {
   background-color: #28a745;
   bottom: 0;
   left: 0;
-  transform: scaleX(0); /* Inicialmente el subrayado está oculto */
+  transform: scaleX(0);
   transition: transform 0.3s ease;
 }
 
-/* Mostrar el subrayado al hacer hover */
+/* Mostrar el subrayado de izquierda a derecha en "Leer más" */
 .leer-mas:hover::after {
-  transform: scaleX(1); /* Aparece el subrayado de izquierda a derecha */
+  transform: scaleX(1);
 }
 
-/* Estilo para los botones de navegación */
+/* Animación de deslizamiento */
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Estilo para los botones */
 button {
-  background-color: #4CAF50; /* Color verde para los botones */
-  border: none;
+  background-color: #28a745;
   color: white;
-  padding: 12px 24px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 25px;
   font-size: 16px;
+  font-weight: bold;
   cursor: pointer;
-  border-radius: 5px; /* Bordes redondeados */
-  margin: 10px 0;
-  transition: background-color 0.3s ease, transform 0.3s ease; /* Suaviza la transición */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 10px;
 }
 
-/* Efecto hover para los botones */
+/* Efecto hover en los botones */
 button:hover {
-  background-color: #45a049; /* Color verde más oscuro al pasar el ratón */
-  transform: translateY(-3px); /* Eleva el botón al hacer hover */
-}
-
-/* Efecto active para los botones al presionarlos */
-button:active {
-  transform: translateY(1px); /* El botón se presiona hacia abajo */
+  background-color: #218838;
+  transform: translateY(-3px); /* Efecto de elevación */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  animation: bounce 0.5s ease infinite; /* Efecto de rebote en el botón */
 }
 
 /* Estilo de footer */
