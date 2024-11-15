@@ -1,30 +1,36 @@
 /* Estilo general para el cuerpo */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
+  background-color: #1c1c1c; /* Fondo oscuro para reflejar fuerza */
+  color: #fff; /* Texto blanco para mayor contraste */
 }
 
 /* Menú de navegación */
 nav {
-  background-color: #333;
-  padding: 10px;
+  background-color: #000; /* Fondo negro para representar poder */
+  padding: 15px 0;
   text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6); /* Sombra para dar profundidad */
 }
 
 nav a {
-  color: white;
-  padding: 10px;
+  color: #d4af37; /* Dorado para reflejar éxito y grandeza */
+  padding: 12px 20px;
   text-decoration: none;
-  font-size: 18px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-size: 20px;
+  transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
+  font-weight: 600;
+  text-transform: uppercase; /* Para agregar fuerza y carácter */
 }
 
 /* Efecto hover en los enlaces del menú */
 nav a:hover {
-  background-color: #218838;
-  transform: scale(1.05); /* Aumenta el tamaño */
+  background-color: #b02a2a; /* Rojo intenso para reflejar su agresividad */
+  transform: scale(1.05); /* Aumenta el tamaño para enfatizar el efecto */
   animation: bounce 0.5s ease infinite; /* Efecto de rebote */
+  color: #fff;
 }
 
 /* Animación de rebote */
@@ -55,6 +61,9 @@ nav a:hover {
   padding: 20px;
   max-width: 600px;
   margin: 0 auto;
+  background-color: #333; /* Fondo gris oscuro para resaltar el contenido */
+  border-radius: 10px; /* Bordes redondeados para suavizar */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra de profundidad */
 }
 
 /* Estilo para los botones */
@@ -74,10 +83,10 @@ nav a:hover {
 /* Estilo de los botones */
 .boton {
   display: inline-block;
-  padding: 20px 20px;
+  padding: 18px 20px;
   font-size: 22px;
   color: #fff;
-  background-color: blueviolet;
+  background-color: #b02a2a; /* Rojo fuerte para representar agresividad */
   border-radius: 8px;
   text-decoration: none;
   transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
@@ -87,16 +96,16 @@ nav a:hover {
 
 /* Efecto hover en los botones */
 .boton:hover {
-  transform: scale(1.1); /* Aumenta el tamaño al pasar el cursor */
-  background-color: #ff6347; /* Cambia el color del botón */
-  color: #333; /* Cambia el color del texto */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transform: scale(1.1); /* Aumenta el tamaño */
+  background-color: #ff6347; /* Color de transición al rojo anaranjado */
+  color: #333; /* Texto oscuro para mayor contraste */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra para profundidad */
 }
 
 /* Efecto al presionar el botón */
 .boton:active {
-  background-color: #ff4500; /* Cambia a un color más oscuro al presionar */
-  transform: scale(1); /* Vuelve a su tamaño original */
+  background-color: #ff4500; /* Color más oscuro cuando se presiona */
+  transform: scale(1); /* Vuelve al tamaño original */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -110,23 +119,30 @@ nav a:hover {
 .social-icons a {
   display: inline-block;
   margin: 10px;
-  padding: 10px;
+  padding: 12px;
   text-decoration: none;
   color: white;
   background-color: #333;
   border-radius: 50%;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 /* Efecto hover en los iconos sociales */
 .social-icons a:hover {
-  background-color: #ff6347;
+  background-color: #ff6347; /* Cambio a rojo intenso */
+  transform: scale(1.1); /* Aumenta el tamaño al pasar el cursor */
 }
 
 /* Estilo de footer */
 footer {
-  background-color: #333;
+  background-color: #000; /* Fondo negro para un acabado elegante */
   color: white;
   padding: 20px;
   text-align: center;
+  font-size: 0.9em;
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.6); /* Sombra para darle un toque de profundidad */
+}
+
+footer p {
+  margin: 0;
 }

@@ -3,53 +3,52 @@ body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
+  background-color: #e6e6e6;
+  color: #333;
 }
 
 /* Menú de navegación */
 nav {
-  background-color: #333;
+  background-color: #1a1a1a;
   padding: 10px;
   text-align: center;
 }
 
 nav a {
-  color: white;
+  color: #ff4d4d; /* Rojo fuerte */
   padding: 14px 20px;
   text-decoration: none;
   font-size: 18px;
+  font-weight: bold;
   display: inline-block;
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 /* Efecto hover en los enlaces del menú */
 nav a:hover {
-  background-color: #218838;
+  background-color: #ff4d4d;
+  color: #1a1a1a;
   border-radius: 5px;
-  transform: scale(1.05); /* Aumenta el tamaño */
-  animation: bounce 0.5s ease infinite; /* Efecto de rebote */
+  transform: scale(1.05);
 }
 
-/* Animación de rebote */
-@keyframes bounce {
-  0% {
-    transform: translateY(0);
-  }
-  20% {
-    transform: translateY(-5px);
-  }
-  40% {
-    transform: translateY(0);
-  }
-  60% {
-    transform: translateY(-3px);
-  }
-  80% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-2px);
-  }
+/* Título principal */
+h1 {
+  font-size: 2.5em;
+  color: #1a1a1a;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Efecto de giro automático para "Bibliografía" */
+.bibliografia {
+  display: inline-block;
+  animation: giro360 5s linear infinite; /* Giro continuo */
+}
+
+@keyframes giro360 {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
 /* Galería de imágenes */
@@ -60,41 +59,31 @@ nav a:hover {
   text-align: center;
 }
 
-h1 {
-  font-size: 2.5em;
-  color: #333;
-  margin-bottom: 40px;
-}
-
-/* Estilos de la galería */
 .galeria {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 20px;
 }
 
-/* Estilo de las imágenes */
 .imagen {
   position: relative;
   overflow: hidden;
   border-radius: 10px;
-  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
 }
 
-/* Efecto hover sobre la imagen */
 .imagen:hover img {
   transform: scale(1.1);
-  animation: bounce 0.5s ease infinite; /* Efecto de rebote en la imagen */
 }
 
-/* Efecto de imagen - Tamaño uniforme */
+/* Estilo de las imágenes */
 .imagen img {
   width: 100%;
-  height: 250px; /* Ajusta esta altura para tu preferencia */
+  height: 250px;
   object-fit: cover;
-  transition: transform 0.3s ease;
   border-radius: 10px;
+  transition: transform 0.3s ease;
 }
 
 /* Descripción que aparece al hacer hover */
@@ -102,15 +91,13 @@ h1 {
   position: absolute;
   bottom: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.7);
-  color: white;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
   width: 100%;
-  padding: 20px;
+  padding: 15px;
   text-align: center;
   transform: translateY(100%);
   transition: transform 0.3s ease;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
 }
 
 .imagen:hover .descripcion {
@@ -118,27 +105,15 @@ h1 {
 }
 
 .descripcion h3 {
+  font-size: 1.2em;
   margin: 0;
-  font-size: 1.3em;
-  color: #fff;
-  font-weight: bold;
+  color: #ff4d4d;
 }
 
-.descripcion p {
-  font-size: 1em;
-  margin-top: 10px;
-  color: rgba(255, 255, 255, 0.9);
-}
-
-/* Animaciones diferentes para cada imagen */
+/* Animaciones de hover personalizadas */
 .animacion1:hover img { animation: scaleUp 0.5s ease forwards; }
 .animacion2:hover img { animation: rotateIn 0.5s ease forwards; }
 .animacion3:hover img { animation: fadeIn 0.5s ease forwards; }
-.animacion4:hover img { animation: slideUp 0.5s ease forwards; }
-.animacion5:hover img { animation: scaleDown 0.5s ease forwards; }
-.animacion6:hover img { animation: rotateOut 0.5s ease forwards; }
-.animacion7:hover img { animation: slideDown 0.5s ease forwards; }
-.animacion8:hover img { animation: fadeOut 0.5s ease forwards; }
 
 /* Definición de animaciones */
 @keyframes scaleUp {
@@ -156,59 +131,29 @@ h1 {
   to { opacity: 1; }
 }
 
-@keyframes slideUp {
-  from { transform: translateY(20px); }
-  to { transform: translateY(0); }
-}
-
-@keyframes scaleDown {
-  from { transform: scale(1); }
-  to { transform: scale(0.9); }
-}
-
-@keyframes rotateOut {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(-15deg); }
-}
-
-@keyframes slideDown {
-  from { transform: translateY(-20px); }
-  to { transform: translateY(0); }
-}
-
-@keyframes fadeOut {
-  from { opacity: 1; }
-  to { opacity: 0.5; }
-}
-
 /* Footer */
 footer {
-  background-color: #333;
+  background-color: #1a1a1a;
   color: white;
   padding: 20px;
   text-align: center;
+  font-size: 0.9em;
+  margin-top: 40px;
 }
 
-/* Caja con animación de ciclo de colores */
+/* Ciclo de colores */
 .ciclo-colores {
   width: 70px;
   height: 70px;
-  margin: 20px; /* Ajusta el margen si lo deseas */
-  background-color: red; /* Color inicial */
-  animation: cicloDeColores 3s infinite; /* Ciclo de colores en 3 segundos, se repite indefinidamente */
+  margin: 20px;
+  background-color: red;
+  animation: cicloDeColores 3s infinite;
   border-radius: 10px;
-  float: right; /* Esto moverá el cuadrado a la derecha */
+  float: right;
 }
 
-/* Animación para ciclo de colores */
 @keyframes cicloDeColores {
-  0% {
-    background-color: red;
-  }
-  50% {
-    background-color: yellow;
-  }
-  100% {
-    background-color: green;
-  }
+  0% { background-color: red; }
+  50% { background-color: yellow; }
+  100% { background-color: green; }
 }
